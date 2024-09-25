@@ -1,0 +1,189 @@
+.app-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .content {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  .add-product-container {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 20px auto; /* Center the form */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: #fff; /* White background */
+    height: 90vh;
+  }
+  
+  h2 {
+    text-align: center; /* Center the header */
+  }
+  
+  .form-group {
+    margin-bottom: 8px; /* Spacing between form fields */
+    height: auto;
+  }
+  
+  label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding inside input */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Round edges */
+  }
+  
+  .error-message {
+    color: red; /* Red color for error messages */
+    text-align: center; /* Center align error messages */
+  }
+  
+  .form-buttons {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: space-between; /* Space between buttons */
+  }
+  
+  button {
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 4px; /* Round edges */
+    cursor: pointer; /* Pointer cursor for buttons */
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745; /* Green for submit */
+    color: white; /* White text */
+  }
+  
+  button[type="button"] {
+    background-color: #007bff; /* Blue for back */
+    color: white; /* White text */
+  }
+  
+  button:hover {
+    opacity: 0.9; /* Slight opacity on hover */
+  }
+  
+  .home-container {
+    width: 100%; /* Set a max width for the container */
+    margin: 10px auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 8px; /* Round corners */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    height: 90vh;
+  }
+  
+  h1 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .product-table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders */
+  }
+  
+  .product-table th, .product-table td {
+    border: 1px solid #ccc; /* Border for table cells */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Left align text */
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+  }
+  
+  .no-data-message {
+    text-align: center; /* Center align message */
+    color: #888; /* Grey color for the message */
+    font-size: 18px; /* Font size for the message */
+    margin-top: 20px; /* Space above the message */
+  }
+  

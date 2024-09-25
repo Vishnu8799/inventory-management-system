@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './index.css'; // Ensure you have your styles in this CSS file
 
-const AddProduct = ({ addProduct }) => {
+const AddProduct = ({ products, setProducts }) => {
   const [productData, setProductData] = useState({
     id: '',
     category: '',
@@ -25,8 +26,9 @@ const AddProduct = ({ addProduct }) => {
     }
 
     // Call the addProduct function passed down as a prop
-    addProduct(productData);
-
+    setProducts((prevProducts) => [...prevProducts, productData]);
+    navigate("/product-list", { state: { message: "Product added successfully!" } });
+    
     // Clear form and navigate back to product list
     setProductData({
       id: '',
@@ -38,15 +40,14 @@ const AddProduct = ({ addProduct }) => {
       supplierName: '',
       status: '',
     });
-    navigate('/dashboard/products');
   };
 
   return (
-    <div>
-      <h2>Add Product</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div className="add-product-container">
+      <div style={{fontSize:'22px',display:'flex',justifyContent:'center'}}>Add Product</div>
+      {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>ID:</label>
           <input
             type="text"
@@ -55,7 +56,7 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Category:</label>
           <select
             value={productData.category}
@@ -70,7 +71,7 @@ const AddProduct = ({ addProduct }) => {
             <option value="Random Item">Random Item</option>
           </select>
         </div>
-        <div>
+        <div className="form-group">
           <label>Brand Name:</label>
           <input
             type="text"
@@ -79,7 +80,7 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Product Name:</label>
           <input
             type="text"
@@ -88,7 +89,7 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Product Model:</label>
           <input
             type="text"
@@ -97,7 +98,7 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Quantity:</label>
           <input
             type="number"
@@ -107,7 +108,7 @@ const AddProduct = ({ addProduct }) => {
             min="0"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Supplier Name:</label>
           <input
             type="text"
@@ -116,7 +117,7 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Status:</label>
           <input
             type="text"
@@ -125,7 +126,10 @@ const AddProduct = ({ addProduct }) => {
             required
           />
         </div>
-        <button type="submit">Add Product</button>
+        <div className="form-buttons">
+          <button type="submit">Add Product</button>
+          <button type="button" onClick={() => navigate("/product-list")}>Back</button>
+        </div>
       </form>
     </div>
   );
